@@ -143,16 +143,7 @@ angular.module("TreeApp", ['ngCookies'])
             data.skills = [];
             $scope.editSave();
         };
-        $scope.deleteElemet = function (data) {
-            console.log(data.parent, 1)
-            data = [];
-
-
-            console.log(data, 2)
-            $scope.editSave();
-        }
-
-
+        
 
         $scope.editSave = function () {
             $cookies.putObject('dataTree', $scope.dataTree, { path: '/' });
