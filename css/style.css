@@ -1,0 +1,103 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+.widget-container {
+    padding: 30px 0;
+
+}
+.tree-widget-container .form-control {
+    width: auto;
+}
+.tree-widget-container {
+    margin: 1em;
+}
+.tree-widget-container li {
+    line-height: 1.2;
+    position: relative;
+    padding: 0 0 1em 1em;
+}
+.tree-widget-container li a {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    line-height: 1.2;
+}
+.tree-widget-container li:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -8px;
+    display: block;
+    width: 0;
+    border-left: 1px solid #777;
+    content: "";
+}
+.tree-widget-container li:last-child:before {
+    height: 31px;
+    bottom: auto;
+}
+.tree-widget-container > li:last-child {
+    padding-bottom: 0;
+}
+.tree-widget-container > li:last-child:before {
+    display: none;
+}
+
+.tree-widget-container ul li {
+    padding: 1.5em 0 0 1em;
+}
+
+.tree-widget-container a.widget-tree-lick.data:before {
+    background: #000;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    float: left;
+    margin: 0 1em 0 -2em;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    content: '+';
+    text-align: center;
+    line-height: .9em;
+}
+.tree-widget-container a.widget-tree-lick.data.active:before {
+    content: '–';
+}
+
+.tree-widget-container a.widget-tree-lick.data:after {
+    position: absolute;
+    top: 0;
+    left: -23px;
+    display: block;
+    height: 0.6em;
+    width: 1em;
+    border-bottom: 1px solid #777;
+    border-left: 1px solid #777;
+    border-radius: 0 0 0 .3em;
+    content: '';
+}
+.tree-widget-container a.widget-tree-lick.data.active:after {
+    border-radius: 0 .3em 0 0;
+    border-top: 1px solid #777;
+    border-right: 1px solid #777;
+    border-bottom: 0;
+    border-left: 0;
+    bottom: 0;
+    top: 0.5em;
+    height: 31px;
+}
+
+.tree-widget-container a.widget-tree-lick:after {
+    position: absolute;
+    top: 0;
+    left: -1.5em;
+    display: block;
+    height: 0.5em;
+    width: 1em;
+    border-bottom: 1px solid #777;
+    border-left: 1px solid #777;
+    border-radius: 0 0 0 .3em;
+    content: '';
+}

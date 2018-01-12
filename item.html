@@ -1,0 +1,17 @@
+<a href="#" ng-init="input_style = false" class="widget-tree-lick"
+   ng-class="{'active': data.opened, 'data': data.skills.length > 0}"
+   ng-click="data.opened = !data.opened; editSave(data)"
+   ng-dblclick="input_style = !input_style; editSave(data)"
+   ng-show="!input_style"
+   ng-keyup="$event.which === 13 ? (input_style = !input_style):'';">{{data.name}}</a>
+
+<input class="form-control d-inline-block form-control-sm"
+       ng-show="input_style" type="text" ng-model="data.name"
+       ng-keyup="$event.which === 13 ? (input_style = !input_style):''; editSave(data)">
+
+<button class="btn btn-primary btn-sm" ng-click="add(data); data.opened = true;">Добавить</button>
+<button class="btn btn-danger btn-sm" ng-click="delete(data);" ng-show="data.skills.length > 0">Удалить узел</button>
+
+<ul ng-show="data.opened">
+    <li ng-repeat="(key, data) in data.skills" ng-include="'item.html'" ></li>
+</ul>
